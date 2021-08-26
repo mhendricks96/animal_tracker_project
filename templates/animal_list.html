@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block body %}
+  <h1>Animals:</h1>  
+  {% for animal in  list_of_animals %}
+    <h2><a href="{% url 'animal_details' animal.pk %}">{{ animal.name }}</a></h2>
+  
+  {% endfor %}
+{% endblock %}
